@@ -1,0 +1,6 @@
+FROM minio/minio:latest
+
+ENV MINIO_ROOT_USER 'hd_minio'
+ENV MINIO_ROOT_PASSWORD '#hd_p@ssword#' 
+
+CMD ["minio","server", "/data/minio", "--console-address", ":8900"]
